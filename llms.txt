@@ -1,11 +1,9 @@
 # Ziggurat of Enki
 # Chivalric registry for the Knights of the Ziggurat
 
-> This site records a knighthood conferred on 13 October 2000 and a new chivalric charter dated 4 November 2026. It does not claim membership in the orders named in the history notes.
-
-- [Claims](https://zigguratofenki.org/claims): What is documented and what is not claimed
-- [The 2000 act](https://zigguratofenki.org/2000): OSMTH dubbing of 13 October 2000
-- [Charter](https://zigguratofenki.org/charter): Knights of the Ziggurat, dated 4 November 2026
-- [Knights Roll](https://zigguratofenki.org/knights): Public register of invested members
-- [The Work](https://zigguratofenki.org/work): Chivalric theurgy and planetary balance
-- [FAQ](https://zigguratofenki.org/faq): Short questions and answers
+- [Claims](https://zigguratofenki.org/claims.html): What is documented, what is not claimed, what is labeled chronicle
+- [The 2000 act](https://zigguratofenki.org/2000.html): Yonkers dubbing of 13 October 2000
+- [Cappello](https://zigguratofenki.org/cappello.html): Conferring prelate; 2001 US priorate as other-order chronicle
+- [The line](https://zigguratofenki.org/line.html): Four-row table
+- [Charter](https://zigguratofenki.org/charter.html): Knights of the Ziggurat, dated 4 November 2026
+- [FAQ](https://zigguratofenki.org/faq.html): Short questions and answers
