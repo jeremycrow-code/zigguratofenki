@@ -1,47 +1,269 @@
+/* =================================================================at
+   ZIGGURAT OF ENKI // THE ALCHEMICAL ARMORY & CHANCERY
+   Stylesheet: Obsidian, Lapis, and Burnished Bronze
+   ================================================================== */
+
 :root {
-  --ink: #1a1612;
-  --paper: #f4efe6;
-  --rule: #c4b8a4;
-  --muted: #5c5348;
-  --stamp: #8a3b12;
-  --link: #6b3a12;
+  --bg-deep: #0b0c10;
+  --bg-surface: #12151e;
+  --bg-card: #181c28;
+  --border-bronze: #c5a059;
+  --border-dim: rgba(197, 160, 89, 0.25);
+  --lapis: #26619c;
+  --lapis-glow: rgba(38, 97, 156, 0.4);
+  --text-main: #e6e1d6;
+  --text-muted: #9e9a90;
+  --accent-gold: #dfbc73;
+  --stamp-border: #8a3b12;
+  --stamp-text: #d96b3a;
+  
+  --font-heading: 'Cinzel', 'Times New Roman', serif;
+  --font-body: 'EB Garamond', Garamond, Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: var(--paper);
-  color: var(--ink);
-  line-height: 1.55;
-  font-size: 1.05rem;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-a { color: var(--link); }
-header, main, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1.25rem 0; }
-header .kicker { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-nav { font-size: 0.9rem; margin: 0.75rem 0 1.5rem; }
-nav a { margin-right: 0.85rem; }
-h1 { font-size: 1.7rem; margin: 0.2rem 0 0.8rem; font-weight: 600; }
-h2 { font-size: 1.15rem; margin-top: 1.6rem; }
-.lede { font-size: 1.08rem; }
+
+html, body {
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  scroll-behavior: smooth;
+}
+
+/* Layout Container */
+.container {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* Header & Navigation */
+header {
+  border-bottom: 1px solid var(--border-bronze);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--border-bronze);
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Navigation Bar */
+nav {
+  margin-top: 1.2rem;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  margin-right: 1.25rem;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent-gold);
+  text-decoration: underline;
+}
+
+/* Main Content Typography */
+main h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--border-bronze);
+  padding-left: 0.75rem;
+}
+
+main h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--text-main);
+  margin-top: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+strong {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+a {
+  color: var(--accent-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* Stamps & Badges */
 .stamp {
   display: inline-block;
-  border: 1px solid var(--stamp);
-  color: var(--stamp);
+  border: 1px solid var(--stamp-border);
+  background: rgba(138, 59, 18, 0.1);
+  color: var(--stamp-text);
+  font-family: var(--font-mono);
   font-size: 0.72rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.15rem 0.45rem;
-  margin: 0.3rem 0 1rem;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 1.2rem;
 }
-ul { padding-left: 1.2rem; }
-li { margin-bottom: 0.45rem; }
-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-th, td { border-bottom: 1px solid var(--rule); text-align: left; padding: 0.4rem 0.35rem; vertical-align: top; }
-footer {
-  border-top: 1px solid var(--rule);
-  margin-top: 2.5rem;
-  padding: 1rem 1.25rem 2rem;
+
+/* Gateway Grid Cards (For Index) */
+.gateway-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .gateway-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.gateway-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  border-top: 2px solid var(--border-bronze);
+  padding: 1.8rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.gateway-card:hover {
+  border-color: var(--border-bronze);
+  transform: translateY(-2px);
+}
+
+.gateway-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--accent-gold);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.gateway-card p {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.gateway-link {
+  font-family: var(--font-heading);
   font-size: 0.85rem;
-  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  text-decoration: none;
 }
-code { font-size: 0.9em; }
+
+.gateway-link:hover {
+  text-decoration: underline;
+}
+
+/* Architectural Callout Box */
+.chancery-box {
+  background-color: var(--bg-surface);
+  border-left: 2px solid var(--border-bronze);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.98rem;
+}
+
+/* Lists and Tables */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--border-bronze);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border-bottom: 1px solid var(--border-dim);
+  text-align: left;
+  padding: 0.75rem 0.5rem;
+  vertical-align: top;
+}
+
+th {
+  font-family: var(--font-heading);
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border-dim);
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+footer a {
+  color: var(--border-bronze);
+}
