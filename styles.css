@@ -267,3 +267,31 @@ footer {
 footer a {
   color: var(--border-bronze);
 }
+
+
+/* Specialized Term Tooltips */
+.glossary-term {
+  border-bottom: 1px dotted var(--border-bronze);
+  cursor: help;
+  position: relative;
+}
+
+.glossary-term:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-bronze);
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: normal;
+  line-height: 1.4;
+  width: 16rem;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  text-align: left;
+}
