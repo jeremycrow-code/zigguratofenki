@@ -269,14 +269,18 @@ footer a {
 }
 
 
-/* Specialized Term Tooltips */
+/* Specialized Term Tooltips (Mobile & Desktop Friendly) */
 .glossary-term {
   border-bottom: 1px dotted var(--border-bronze);
   cursor: help;
   position: relative;
+  display: inline-block;
 }
 
-.glossary-term:hover::after {
+/* Show on hover (desktop) or active focus (mobile tap) */
+.glossary-term:hover::after,
+.glossary-term:focus::after,
+.glossary-term:active::after {
   content: attr(data-tooltip);
   position: absolute;
   bottom: 125%;
@@ -295,3 +299,4 @@ footer a {
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   text-align: left;
 }
+
